@@ -1,0 +1,146 @@
+@import './utils/variables';
+@import './components/logo';
+@import './components/nav';
+@import './components/contacts';
+@import './components/hero';
+@import './components/site-features';
+@import './components/site-work';
+@import './components/site-team';
+@import './components/socials';
+@import './components/clients';
+@import './components/address';
+@import './components/subscription';
+@import './components/modal-form';
+@import './components/portfolio-filter';
+@import './components/portfolio-cards';
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0px;
+	padding: 0;
+}
+
+:active, :hover, :focus {
+	outline: 0;
+	outline-offset: 0;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: Roboto, Arial, Verdana sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: $main-bg;
+  color: $main-text;
+}
+
+.container {
+	margin: 0 auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title {
+	font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.site-header {
+  border-bottom: 1px $border solid;
+
+	&__container {
+		display: flex;
+	}
+}
+
+.site-footer {
+  background-color: $secondary-bg;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+	&__container {
+		display: flex;
+		align-items: baseline;
+	}
+}
+
+.socials-footer__title {
+	color: $secondary-text;
+	font-weight: 700;
+	line-height: 1.1;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+  cursor: pointer;
+  background-color: $hover;
+  color: $secondary-text;
+  border-radius: 4px;
+  border-style: none;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px $primary-shadow;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover {
+	background-color: $primary-hover;
+	}
+
+	&__text {
+		display: flex;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		line-height: 1.9;
+		font-family: "Roboto", sans-serif;
+	}
+
+	&__icon {
+		margin-left: 10px;
+	}
+}
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	background-color: $backbrop-bg-color;
+
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&.is-hidden {
+		opacity: 0;
+		pointer-events: none;
+		
+		transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+}

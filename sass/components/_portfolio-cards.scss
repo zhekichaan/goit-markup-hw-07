@@ -1,0 +1,99 @@
+// Portfolio
+
+.site-portfolio {
+	padding-top: 94px;
+	padding-bottom: 94px;
+
+	&__title {
+		display: none;
+	}
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+
+	&__item {
+		margin-right: 30px;
+		margin-bottom: 30px;
+
+		&:nth-child(3n) {
+			margin-right: 0px;
+		}
+
+		&:nth-last-child(-n + 3) {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+// Portfolio Card
+
+.portfolio-card {
+  text-decoration: none;
+	display: block;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover {
+		box-shadow: 0px 1px 1px $primary-shadow, 
+		0px 4px 4px $shadow, 
+		1px 4px 6px $primary-shadow;
+	}
+
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 2;
+		letter-spacing: 0.06em;
+		color: $main-text;
+	}
+
+	&__text {
+		font-size: 16px;
+  	margin-top: 4px;
+  	line-height: 1.8;
+  	color: $contacts;
+	}
+
+	&__content {
+		padding: 20px 24px;
+		border-right: 1px solid $primary-border;
+		border-left: 1px solid $primary-border;
+		border-bottom: 1px solid $primary-border;
+	}
+
+	&__box {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 63px 24px;
+		background-color: $portfolio-overlay;
+	
+		transform: translateY(101%);
+		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	
+		.portfolio-card:hover & {
+			transform: translateY(0);
+		}
+	}
+
+	&__overlay-text {
+		font-size: 18px;
+		line-height: 1.5;
+		color: $secondary-text;
+	}
+}
+
+.card-thumb a {
+  padding-bottom: 110px;
+}
+
+
